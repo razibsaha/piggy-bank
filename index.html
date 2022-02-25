@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <h1 class="text-5xl text-center mt-16 font-semibold">Bank of<span class="text-600"> Money </span> </h1>
+
+    </header>
+        <div class="grid grid-cols-2 gap-4 p-4">
+            
+             
+            <div class="grid-cols-6"><img src="./images/pexels-cottonbro-3943723.jpg" alt="" width="100%"></div>
+             
+             <div class="grid-cols-6 p-4 bg-slate-200">
+                 <h6 class="text-2xl text-center mt-2 mb-2 font-semibold">Income</h6>
+                 <div>
+                     Income: 
+                     <input class="py-2 rounded mb-2" id="income-input" type="text">
+                     <p id="failed" hidden>!! Please input a number</p>
+                 </div>
+                 <h6 class="text-2xl text-center mt-2 mb-4 font-semibold">Expenses</h6>
+                 <div class="place-items-end">
+                     <div class="mb-5">Food: 
+                         <input class="py-2 rounded" id="food-input" type="text"></div>
+                     <div class="mb-5">Rent: 
+                         <input class="py-2 rounded" id="rent-input" type="text"></div>
+                     <div class="mb-5">Clothes: 
+                         <input class="py-2 rounded" id="clothes-input" type="text"></div>
+
+                     <button id="calculate" class="rounded bg-blue-500 hover:bg-blue-700 py-2 px-4 text-white mb-5">Calculate</button>
+
+                     <div class="mb-5">Total Expenses: <span id="total-expenses">$$$$</span></div>
+                     <div class="mb-5">Balance: <span id="balance">$$$$</span></div>
+                </div>
+                <div>
+                    <span>Save: 
+                        <input class="py-2 rounded" id="save-input" type="text"> %
+                    <button class="rounded bg-blue-500 hover:bg-blue-700 py-2 px-4 text-white mb-5">Save</button></span>
+                    <div>Saving Amount: <span></span>$$$$</div>
+                     <div>Remaining Balance: <span></span>$$$$</div>
+                </div>
+    
+             </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <section>
+
+        <script src="./script.js"></script>
+        <script src="./tailwind.config.js"></script>
+    </section>
+</body>
+</html>
