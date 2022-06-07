@@ -9,42 +9,84 @@
 </head>
 <body>
     <header>
-        <h1 class="text-5xl text-center mt-16 font-semibold">Bank of<span class="text-600"> Money </span> </h1>
+        <h1 class="text-5xl text-center mt-16 font-bold font-mono">Piggy<span class="text-[#5d77d8] hover:bg-[#455eb8]] font-mono"> Bank </span> </h1>
+        <p class="text-center mt-5 font-mono px-20">Calculate your monthly bills with your income. A great tools to get a summary of your income and expenses ratio.</p>
 
     </header>
-        <div class="grid grid-cols-2 gap-4 p-4">
+        <div class="grid md:grid-cols-2 lg:px-42 md:px-12 mt-12 mb-12">
             
              
-            <div class="grid-cols-6"><img src="./images/pexels-cottonbro-3943723.jpg" alt="" width="100%"></div>
+            <div class="grid-cols-6"><img src="./images/image_processing20201220-13274-101oc0p.png" alt="" class="md:h-[780px] h-[250px] w-full object-cover"></div>
              
-             <div class="grid-cols-6 p-4 bg-slate-200">
-                 <h6 class="text-2xl text-center mt-2 mb-2 font-semibold">Income</h6>
+             <div class="grid-cols-6 p-4 bg-blue-100 mb-5">
+                 <h6 class="text-3xl mt-2 mb-2 font-bold">Income</h6>
                  <div>
-                     Income: 
-                     <input class="py-2 rounded mb-2" id="income-input" type="text">
-                     <p id="failed" hidden>!! Please input a number</p>
+                     <input class="px-3 py-3 w-full rounded mb-2" id="income-input" type="number">
+                     <p id="failed" hidden>!!Please input a number</p>
                  </div>
-                 <h6 class="text-2xl text-center mt-2 mb-4 font-semibold">Expenses</h6>
-                 <div class="place-items-end">
-                     <div class="mb-5">Food: 
-                         <input class="py-2 rounded" id="food-input" type="text"></div>
-                     <div class="mb-5">Rent: 
-                         <input class="py-2 rounded" id="rent-input" type="text"></div>
-                     <div class="mb-5">Clothes: 
-                         <input class="py-2 rounded" id="clothes-input" type="text"></div>
+                 <h6 class="text-3xl mt-6 font-bold mb-3">Expenses</h6>
 
-                     <button id="calculate" class="rounded bg-blue-500 hover:bg-blue-700 py-2 px-4 text-white mb-5">Calculate</button>
+                 <div>
+                     
+                        <div class="lg:grid grid-cols-3 gap-2">
+                            <div class="mb-5">
+                                <div class="w-auto font-bold text-slate-500">Food:</div>  
+                               <input class="px-3 py-3 w-full rounded mt-2" id="food-input" type="number">
+                               </div>
+       
+                               <div class="mb-5">
+                                   <div class="w-auto font-bold text-slate-500">Rent:</div> 
+                               <input class="px-3 py-3 w-full rounded mt-2" id="rent-input" type="number">
+                               </div>
+                                   
+                               <div class="mb-5">
+                                   <div class="w-auto font-bold text-slate-500">Clothes:</div> 
+                               <input class="px-3 py-3 w-full rounded mt-2" id="clothes-input" type="number">
+                               </div>
+                        </div>
 
-                     <div class="mb-5">Total Expenses: <span id="total-expenses">$$$$</span></div>
-                     <div class="mb-5">Balance: <span id="balance">$$$$</span></div>
-                </div>
-                <div>
-                    <span>Save: 
-                        <input class="py-2 rounded" id="save-input" type="text"> %
-                    <button class="rounded bg-blue-500 hover:bg-blue-700 py-2 px-4 text-white mb-5">Save</button></span>
-                    <div>Saving Amount: <span></span>$$$$</div>
-                     <div>Remaining Balance: <span></span>$$$$</div>
-                </div>
+                        <div class="flex justify-start items-baseline">
+                                <div class="mb-5">
+                                    <p class="text-3xl font-regular text-slate-500 mb-2">
+                                    Total Expenses : </p>
+                                    <span id="total-expenses" class="text-[#5d77d8] font-bold text-3xl"> 00.0$</span>
+                                </div>
+
+                                <div class="px-5">
+                                    <p class="text-3xl font-regular text-slate-500 mb-2">Available Balance : </p> 
+                                    <span id="rem-balance" class="text-[#5d77d8] font-bold text-3xl">00.0$</span>
+                                </div>
+                        </div>
+
+                        <div class="md:flex justify-center items-center w-full">
+                                    <button id="calculate" class="rounded bg-[#5d77d8] hover:bg-[#455eb8] py-3 px-24 text-white mb-5 mt-5 md:w-auto w-full">Calculate</button>
+                        </div>
+
+                     
+                
+                
+                
+                        <div>
+                            <span>
+                                <h6 class="text-3xl mt-2 mb-2 font-bold">Savings : </h6> 
+                                <input class="px-3 py-3 rounded font-bold mb-3 w-full" id="save-input" type="number"
+                                placeholder="%">
+                            <div class="md:flex justify-center items-center">
+                                <button id="savings" class="rounded bg-[#5d77d8] hover:bg-[#455eb8] py-3 px-24 text-white mb-5 mt-5 md:w-auto w-full">Check</button>
+                            </div></span>
+                            <div class="flex justify-start">
+                                <div> <p class="text-3xl font-regular text-slate-500 mb-2">Saving Amount: </p>
+                                    <span id="saving-amount"
+                                    class="text-[#5d77d8] font-bold text-3xl">00.0$</span></div>
+                                 <div class="px-5"><p class="text-3xl font-regular text-slate-500 mb-2">
+                                    Remaining Balance:
+                                 </p> <span 
+                                 class="text-[#5d77d8] font-bold text-3xl"
+                                 id="remaining-amount">00.0$</span></div>
+                            </div>
+                            </div>
+                    </div>
+                
     
              </div>
         </div>
